@@ -1,0 +1,64 @@
+$blue--dark: #0d47a1;
+$blue--light: #bbdefb;
+$pink--dark: #880e4f;
+$pink--light: #f8bbd0;
+$orange--dark: #e65100;
+$orange--light: #ffe0b2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #d467d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: background 0.4s linear;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.tab-cont {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  width: 450px;
+
+  .tab {
+    border-radius: 50px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    align-items: center;
+
+    span {
+      max-width: 0;
+      overflow: hidden;
+    }
+  }
+
+  .active span {
+    margin-left: 10px;
+    max-width: 200px;
+    transition: max-width 2s linear;
+  }
+  .active.pink {
+    background: $pink--light;
+    color: $pink--dark;
+  }
+  .active.blue {
+    background: $blue--light;
+    color: $blue--dark;
+  }
+  .active.orange {
+    background: $orange--light;
+    color: $orange--dark;
+  }
+}
